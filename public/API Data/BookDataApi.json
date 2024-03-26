@@ -1,5 +1,5 @@
 [
-    {
+  {
       "bookId": 1,
       "bookName": "Harry Potter and the Philosopher's Stone",
       "author": "J.K. Rowling",
@@ -8,11 +8,11 @@
       "totalPages": 336,
       "rating": 4.7,
       "category": "Fantasy",
-      "tags": ["Wizardry", "Adventure", "Friendship"],
+      "tags": ["Wizardry", "Adventure"],
       "publisher": "Bloomsbury Publishing",
       "yearOfPublishing": 1997
-    },
-    {
+  },
+  {
       "bookId": 2,
       "bookName": "To Kill a Mockingbird",
       "author": "Harper Lee",
@@ -21,11 +21,11 @@
       "totalPages": 281,
       "rating": 4.7,
       "category": "Fiction",
-      "tags": ["Coming-of-age", "Legal Drama", "Social Issues"],
+      "tags": ["Coming-of-age", "Legal Drama"],
       "publisher": "J.B. Lippincott & Co.",
       "yearOfPublishing": 1960
-    },
-    {
+  },
+  {
       "bookId": 3,
       "bookName": "The Great Gatsby",
       "author": "F. Scott Fitzgerald",
@@ -34,11 +34,11 @@
       "totalPages": 180,
       "rating": 4.5,
       "category": "Fiction",
-      "tags": ["Classic", "Romance", "Tragedy"],
+      "tags": ["Classic", "Romance"],
       "publisher": "Scribner",
       "yearOfPublishing": 1925
-    },
-    {
+  },
+  {
       "bookId": 4,
       "bookName": "The Catcher in the Rye",
       "author": "J.D. Salinger",
@@ -47,11 +47,11 @@
       "totalPages": 224,
       "rating": 4.3,
       "category": "Fiction",
-      "tags": ["Coming-of-age", "Alienation", "Identity"],
+      "tags": ["Coming-of-age", "Alienation"],
       "publisher": "Little, Brown and Company",
       "yearOfPublishing": 1951
-    },
-    {
+  },
+  {
       "bookId": 5,
       "bookName": "The Lord of the Rings",
       "author": "J.R.R. Tolkien",
@@ -60,11 +60,11 @@
       "totalPages": 1178,
       "rating": 4.9,
       "category": "Fantasy",
-      "tags": ["Adventure", "Epic", "Magic"],
+      "tags": ["Adventure", "Epic"],
       "publisher": "Allen & Unwin",
       "yearOfPublishing": 1954
-    },
-    {
+  },
+  {
       "bookId": 6,
       "bookName": "Pride and Prejudice",
       "author": "Jane Austen",
@@ -73,24 +73,24 @@
       "totalPages": 279,
       "rating": 4.6,
       "category": "Fiction",
-      "tags": ["Romance", "Satire", "Social Commentary"],
+      "tags": ["Romance", "Satire"],
       "publisher": "T. Egerton, Whitehall",
       "yearOfPublishing": 1813
-    },
-    {
-        "bookId": 7,
-        "bookName": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
-        "author": "C.S. Lewis",
-        "image": "https://i.ibb.co/HGV4Hq0/The-Chronicles-of-Narnia.png",
-        "review": "A timeless fantasy classic that follows the adventures of four siblings who discover a magical world through a wardrobe.",
-        "totalPages": 206,
-        "rating": 4.6,
-        "category": "Fantasy",
-        "tags": ["Adventure", "Magic", "Children's Literature"],
-        "publisher": "Geoffrey Bles",
-        "yearOfPublishing": 1950
-      },
-    {
+  },
+  {
+      "bookId": 7,
+      "bookName": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
+      "author": "C.S. Lewis",
+      "image": "https://i.ibb.co/HGV4Hq0/The-Chronicles-of-Narnia.png",
+      "review": "A timeless fantasy classic that follows the adventures of four siblings who discover a magical world through a wardrobe.",
+      "totalPages": 206,
+      "rating": 4.6,
+      "category": "Fantasy",
+      "tags": ["Adventure", "Magic"],
+      "publisher": "Geoffrey Bles",
+      "yearOfPublishing": 1950
+  },
+  {
       "bookId": 8,
       "bookName": "The Hobbit",
       "author": "J.R.R. Tolkien",
@@ -99,11 +99,11 @@
       "totalPages": 310,
       "rating": 4.7,
       "category": "Fantasy",
-      "tags": ["Adventure", "Epic", "Magic"],
+      "tags": ["Adventure", "Epic"],
       "publisher": "Allen & Unwin",
       "yearOfPublishing": 1937
-    },
-    {
+  },
+  {
       "bookId": 9,
       "bookName": "The Da Vinci Code",
       "author": "Dan Brown",
@@ -112,11 +112,11 @@
       "totalPages": 689,
       "rating": 4.2,
       "category": "Mystery",
-      "tags": ["Conspiracy", "Art", "Religion"],
+      "tags": ["Conspiracy", "Art"],
       "publisher": "Doubleday",
       "yearOfPublishing": 2003
-    },
-    {
+  },
+  {
       "bookId": 10,
       "bookName": "The Alchemist",
       "author": "Paulo Coelho",
@@ -125,9 +125,8 @@
       "totalPages": 197,
       "rating": 4.2,
       "category": "Fiction",
-      "tags": ["Philosophical", "Quest", "Spirituality"],
+      "tags": ["Philosophical", "Quest"],
       "publisher": "HarperCollins",
       "yearOfPublishing": 1988
-    }
-  ]
-  
+  }
+]
