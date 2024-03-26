@@ -1,16 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
 import './index.css';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import RootPages from './pages/RootPages/RootPages.jsx';
 import Home from './pages/Home/Home.jsx';
 import ListedBooks from './pages/ListedBooks/ListedBooks.jsx';
 import PagesToRead from './pages/PagesToRead/PagesToRead.jsx';
-import SingleBookDetails from './components/singleBookDetails/singleBookDetails'; // Correct component import name
+import SingleBookDetails from './components/singleBookDetails/SingleBookDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -19,8 +18,8 @@ const router = createBrowserRouter([
     children:[
       {
         path: "/",
-        loader: ()=> fetch('./API Data/BookDataApi.json'),
         element: <Home></Home>,
+        loader: ()=> fetch('../API_Data/BookDataApi.json'),
       },
       {
         path: "/list-books",
@@ -33,7 +32,6 @@ const router = createBrowserRouter([
       {
         path: "/booksId/:bookId",
         element: <SingleBookDetails></SingleBookDetails>,
-        loader: ()=> fetch('./API Data/BookDataApi.json'),
       }
     ]
   },

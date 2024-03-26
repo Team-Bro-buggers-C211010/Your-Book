@@ -1,19 +1,31 @@
-import { useLoaderData, useParams } from "react-router-dom"
+import { useEffect, useState } from 'react';
+import SingleBookCard from './../SingleBookCard/SingleBookCard';
+import { useParams } from 'react-router-dom';
 
-const singleBookDetails = () => {
+const SingleBookDetails = () => {
     const { bookId } = useParams();
-    const books = useLoaderData();
-    const currentBook = books.filter(book => book.bookId == bookId);
-    console.log(currentBook);
+    console.log(bookId);
+    const [books, setBooks] = useState([]);
+    
+    useEffect(() => {
+        fetch("/API_Data/BookDataApi.json")
+            .then(res => res.json())
+            .then(bookData => setBooks(bookData))
+            .catch(error => console.error('Error fetching book data:', error));
+    }, []);
+
+    const filteredBooks = books.filter(book => book.bookId == bookId);
+    console.log(filteredBooks);
     return (
         <div>
             {
-                currentBook.map( listBook => (
-                    <p>Book Name : {listBook.bookName}</p>
+                filteredBooks.map(book => (
+                    <SingleBookCard key={book.bookId} book={book} />
                 ))
             }
         </div>
     )
 }
 
-export default singleBookDetails
+
+export default SingleBookDetails;

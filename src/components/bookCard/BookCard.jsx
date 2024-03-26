@@ -1,8 +1,10 @@
 
+import { Link } from 'react-router-dom';
 import rating from '../../assets/images/ratings.png'
 const BookCard = ({book}) => {
     const tags = book.tags;
     return (
+        <Link to={`booksId/${book.bookId}`}>
         <div className="card border border-[#13131326] w-full md:w-96 h-full bg-base-100 shadow-xl mx-auto">
             <figure className="px-6 pt-6">
                 <div className="bg-[#F3F3F3] w-full  max-h-[230px] rounded-2xl flex justify-center">
@@ -15,7 +17,6 @@ const BookCard = ({book}) => {
         <div key={tag} className="bg-[#23BE0A0D] text-[#23BE0A] px-4 py-2 rounded-full">{tag}</div>
     ))}
 </div>
-
                 <h1 className="mt-4 mb-4 fontPlayfairDisplay text-2xl font-bold">{book.bookName}</h1>
                 <h3 className="fontWorkSans font-medium">By : {book.author}</h3>
                 <hr className="border-dashed mt-5 mb-5" />
@@ -25,6 +26,7 @@ const BookCard = ({book}) => {
                 </div>
             </div>
         </div>
+        </Link>
     )
 }
 
