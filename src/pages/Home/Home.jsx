@@ -1,6 +1,10 @@
+import Banners from "../../components/Banner/Banners.jsx";
+
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <Banners></Banners>
+    </div>
   )
 }
 
