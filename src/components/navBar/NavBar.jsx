@@ -31,7 +31,7 @@ const navBar = () => {
                         isActive ? 'text-[#23BE0A] border border-[#23BE0A] bg-white' : ''}>Pages to Read</NavLink></li>
                 </ul>
             </div>
-            <div className="hidden md:inline-block  navbar-end gap-x-4">
+            <div className="hidden md:flex  navbar-end gap-x-4">
                 <button className="btn bg-[#23BE0A] text-white">Sign In</button>
                 <button className="btn bg-[#59C6D2] text-white">Sign Up</button>
             </div>
