@@ -3,7 +3,7 @@ import rating from '../../assets/images/ratings.png'
 const BookCard = ({book}) => {
     const tags = book.tags;
     return (
-        <div className="card border border-[#13131326] w-full md:w-96 bg-base-100 shadow-xl mx-auto">
+        <div className="card border border-[#13131326] w-full md:w-96 h-full bg-base-100 shadow-xl mx-auto">
             <figure className="px-6 pt-6">
                 <div className="bg-[#F3F3F3] w-full  max-h-[230px] rounded-2xl flex justify-center">
                     <img src={book.image} alt="Shoes" className="rounded-xl w-full md:w-[326px] max-h-[230px] object-contain" />
