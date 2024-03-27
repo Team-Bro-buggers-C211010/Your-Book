@@ -14,7 +14,7 @@ setSortData(sortedData);
 },[])
   return (
     <div>
-        <div className="w-full fontWorkSans font-bold text-[28px] rounded-2xl flex items-center justify-center h-24 bg-[#1313130D]">Best Selling Book</div>
+        <div className="w-full border border-[#23BE0A] mb-5 fontWorkSans font-bold text-[28px] rounded-2xl flex items-center justify-center h-24 bg-[#1313130D]">Best Selling Book</div>
         {
                 sortData.map(read => <div className="card lg:card-side bg-base-100 shadow-xl border border-[#1313130D] p-6 gap-x-6 mb-6">
                 <div className="rounded-2xl flex bg-[#1313130D] justify-center items-center"><img src={read.image} className="w-40 h-40 md:w-[230px] md:h-[229px] object-contain" alt="Movie" /></div>

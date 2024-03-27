@@ -1,7 +1,7 @@
 const Cart = () => {
     return (
         <div className="fontWorkSans">
-            <div className="mb-6 w-full fontWorkSans font-bold text-[28px] rounded-2xl flex items-center justify-center h-24 bg-[#1313130D]">Thank You For the Order</div>
+            <div className="mb-6 border border-[#23BE0A] w-full fontWorkSans font-bold text-[28px] rounded-2xl flex items-center justify-center h-24 bg-[#1313130D]">Thank You For the Order</div>
             <div className="text-center font-semibold mb-5 text-2xl fontWorkSans">Details:</div>
             <div className="flex flex-col gap-y-3">
                 <label className="input input-bordered flex items-center gap-2">
@@ -32,7 +32,7 @@ const Cart = () => {
                     <span className="badge bg-green-600 text-white badge-info">Optional</span>
                 </label>
             </div>
-            <div><button className="btn bg-yellow-500 text-white">Place Order</button></div>
+            <div className="mt-3 md:gap-x-2 gap-y-2 md:gap-y-0 flex justify-center font-semibold"><button className="btn bg-[#42b653e2] text-white">Place Order</button> <button className="btn bg-[#42b653e2] text-white">Cancel Order</button></div>
         </div>
     )
 }
