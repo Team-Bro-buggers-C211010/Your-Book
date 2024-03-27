@@ -36,7 +36,7 @@ const navBar = () => {
                     <li><NavLink to="/best-sellers" className={({ isActive }) =>
                         isActive ? 'text-[#23BE0A] border border-[#23BE0A] bg-white' : ''}>Best Sellers</NavLink></li>
                     <li><NavLink to="/book-carts" className={({ isActive }) =>
-                        isActive ? 'text-[#23BE0A] border border-[#23BE0A] bg-white' : ''}> <img className="mr-1 w-6 h-6" src={cart} alt="" /> Carts</NavLink></li>
+                        isActive ? 'text-[#23BE0A] border border-[#23BE0A] bg-white' : ''}> <img className="mr-1 w-5 h-5" src={cart} alt="cart image" /> Carts</NavLink></li>
                 </ul>
             </div>
             <div className="hidden md:flex  navbar-end gap-x-4">
