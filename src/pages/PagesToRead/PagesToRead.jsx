@@ -35,7 +35,7 @@ const PagesToRead = () => {
 
   return (
     <div>
-      <ResponsiveContainer width="100%" height={800}>
+      <ResponsiveContainer width="100%" height={600}>
         <BarChart data={readBooks}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="bookName" />
