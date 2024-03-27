@@ -1,8 +1,38 @@
+import { getStoredReadBooks, getStoredWishlistBooks, saveReadBooks, saveWishListBooks } from "../../ulity/localstorage";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const SingleBookCard = ({ book }) => {
     const tag = book.tags;
+    const handleReadBooksList = () =>{
+        const data = getStoredReadBooks();
+        const exist = data.find(readBook => readBook === book.bookId);
+        if(!exist){
+            saveReadBooks(book.bookId);
+            toast.success("Book added to the Read List !!!");
+        }
+        else{
+            toast.warning("Books Already Read by you !!!");
+        }
+    }
+    const handleWishlistBooks = () => {
+        const wishList = getStoredWishlistBooks();
+        const data = getStoredReadBooks();
+        const exist1 = wishList.find(wishBook => wishBook === book.bookId);
+        const exist2 = data.find(data => data === book.bookId);
+        if(!exist1 && !exist2){
+            saveWishListBooks(book.bookId);
+            toast.success("Book added to the Wishlist !!!");
+        }
+        else if(exist2){
+            toast.warning("Books Already Read by you !!!");
+        }
+        else{
+            toast.warning("Book already in Wishlist !!!");
+        }
+    }
     return (
         <div className="w-full flex flex-col md:flex-row gap-x-12 items-center mb-16">
-            <div className="w-full md:w-1/2 bg-[#1313130D] rounded-2xl flex md:items-center justify-center">
+            <div className="w-full md:w-1/2 bg-[#1313130D] rounded-2xl flex md:items-center justify-center p-5">
                 <img src={book.image} alt="book" className=" w-52 h-72 md:w-[573px] md:h-[711px] object-contain" />
             </div>
             <div className="flex-auto w-full md:w-1/2">
@@ -37,10 +67,11 @@ const SingleBookCard = ({ book }) => {
                     <p className="text-[#131313] font-semibold">{book.rating}</p>
                 </div>
                 <div className="flex mt-8 text-sm md:text-base gap-x-4">
-                    <button className="btn bg-white border border-[#1313134D] w-[101px] h-[57px] fontWorkSans font-semibold">Read</button>
-                    <button className="btn w-[128px] h-[57px] bg-[#50B1C9] text-white fontWorkSans font-semibold">Wishlist</button>
+                    <button className="btn bg-white border border-[#1313134D] w-[101px] h-[57px] fontWorkSans font-semibold" onClick={handleReadBooksList}>Read</button>
+                    <button className="btn w-[128px] h-[57px] bg-[#50B1C9] text-white fontWorkSans font-semibold" onClick={handleWishlistBooks}>Wishlist</button>
                 </div>
             </div>
+            <ToastContainer />
         </div>
     );
 };

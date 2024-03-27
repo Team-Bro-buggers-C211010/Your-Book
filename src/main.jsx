@@ -23,7 +23,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/list-books",
-        element: <ListedBooks></ListedBooks>
+        element: <ListedBooks></ListedBooks>,
+        loader: ()=> fetch('../API_Data/BookDataApi.json'),
       },
       {
         path: "/read-posts",

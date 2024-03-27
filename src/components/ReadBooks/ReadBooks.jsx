@@ -1,6 +1,7 @@
 import location from '../../assets/images/locations.png';
 import publisher from '../../assets/images/pubisher.png';
 import page from '../../assets/images/page.png';
+
 const ReadBooks = () => {
     return (
         <div className="card lg:card-side bg-base-100 shadow-xl border border-[#1313130D] p-6 gap-x-6">
