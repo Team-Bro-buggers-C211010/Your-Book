@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom"
-
+import cart from "../../assets/images/cart.png"
 const navBar = () => {
     return (
         <div className="navbar bg-base-100 fontWorkSans">
@@ -15,6 +15,10 @@ const navBar = () => {
                             isActive ? 'text-[#23BE0A] border border-[#23BE0A] bg-white' : ''}>Listed Books</NavLink></li>
                         <li><NavLink to="/read-posts" className={({ isActive }) =>
                             isActive ? 'text-[#23BE0A] border border-[#23BE0A] bg-white' : ''}>Pages to Read</NavLink></li>
+                        <li><NavLink to="/best-sellers" className={({ isActive }) =>
+                        isActive ? 'text-[#23BE0A] border border-[#23BE0A] bg-white' : ''}>Best Sellers</NavLink></li>
+                    <li><NavLink to="/book-carts" className={({ isActive }) =>
+                        isActive ? 'text-[#23BE0A] border border-[#23BE0A] bg-white' : ''}>Carts</NavLink></li>
                             <button className="btn bg-[#23BE0A] text-white">Sign In</button>
                 <button className="btn bg-[#59C6D2] text-white">Sign Up</button>
                     </ul>
@@ -29,6 +33,10 @@ const navBar = () => {
                         isActive ? 'text-[#23BE0A] border border-[#23BE0A] bg-white' : ''}>Listed Books</NavLink></li>
                     <li><NavLink to="/read-posts" className={({ isActive }) =>
                         isActive ? 'text-[#23BE0A] border border-[#23BE0A] bg-white' : ''}>Pages to Read</NavLink></li>
+                    <li><NavLink to="/best-sellers" className={({ isActive }) =>
+                        isActive ? 'text-[#23BE0A] border border-[#23BE0A] bg-white' : ''}>Best Sellers</NavLink></li>
+                    <li><NavLink to="/book-carts" className={({ isActive }) =>
+                        isActive ? 'text-[#23BE0A] border border-[#23BE0A] bg-white' : ''}> <img className="mr-1 w-6 h-6" src={cart} alt="" /> Carts</NavLink></li>
                 </ul>
             </div>
             <div className="hidden md:flex  navbar-end gap-x-4">
