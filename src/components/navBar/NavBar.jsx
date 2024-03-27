@@ -19,7 +19,7 @@ const navBar = () => {
                 <button className="btn bg-[#59C6D2] text-white">Sign Up</button>
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl text-[#131313] font-bold">Your Book</a>
+                <Link to="/" className="btn btn-ghost text-xl text-[#131313] font-bold">Your Book</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 gap-x-4 font-semibold text-[#131313CC]">

@@ -4,7 +4,6 @@ import { useParams } from 'react-router-dom';
 
 const SingleBookDetails = () => {
     const { bookId } = useParams();
-    console.log(bookId);
     const [books, setBooks] = useState([]);
     
     useEffect(() => {
@@ -15,7 +14,6 @@ const SingleBookDetails = () => {
     }, []);
 
     const filteredBooks = books.filter(book => book.bookId == bookId);
-    console.log(filteredBooks);
     return (
         <div>
             {

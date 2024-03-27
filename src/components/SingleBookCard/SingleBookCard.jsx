@@ -46,7 +46,7 @@ const SingleBookCard = ({ book }) => {
                 <div className="flex gap-4 items-center mt-7 mb-6">
                     <h3 className="text-[#131313] font-bold ">Tag</h3>
                     {
-                        tag.map(tagInfo => <div className="bg-[#23BE0A0D] text-[#23BE0A] text-sm md:text-base px-4 py-2 rounded-full flex fontWorkSans font-medium">#{tagInfo}</div> )
+                        tag.map((tagInfo ,idx)=> <div key={idx} className="bg-[#23BE0A0D] text-[#23BE0A] text-sm md:text-base px-4 py-2 rounded-full flex fontWorkSans font-medium">#{tagInfo}</div> )
                     }
                 </div>
                 <hr className="mb-6" />
