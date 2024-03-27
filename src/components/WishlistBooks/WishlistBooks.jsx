@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getStoredWishlistBooks } from "../../ulity/localstorage";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import location from '../../assets/images/locations.png';
 import publisher from '../../assets/images/pubisher.png';
 import page from '../../assets/images/page.png';
@@ -56,7 +56,7 @@ const WishlistBooks = () => {
                     <div className='flex flex-col md:flex-row md:gap-x-3 gap-y-2 md:gap-y-0 text-center text-sm md:text-base'>
                         <div className='bg-[#328EFF26] text-[#328EFF] rounded-full px-5 py-3'>Category: {wish.category}</div>
                         <div className='bg-[#FFAC3326] text-[#FFAC33] rounded-full px-5 py-3'>Rating: {wish.rating}</div>
-                        <div className='bg-[#23BE0A] text-white rounded-full px-5 py-3 hover:cursor-pointer'>View Details</div>
+                        <Link to={`/booksId/${wish.bookId}`}><div className='bg-[#23BE0A] text-white rounded-full px-5 py-3 hover:cursor-pointer'>View Details</div></Link>
                     </div>
                 </div>
             </div>)
