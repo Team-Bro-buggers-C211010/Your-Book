@@ -13,7 +13,7 @@ const navBar = () => {
                             isActive ? 'text-[#23BE0A] border border-[#23BE0A] bg-white' : ''}>Home</NavLink></li>
                         <li><NavLink to="/list-books" className={({ isActive }) =>
                             isActive ? 'text-[#23BE0A] border border-[#23BE0A] bg-white' : ''}>Listed Books</NavLink></li>
-                        <li><NavLink to="/read-posts" className={({ isActive }) =>
+                        <li><NavLink to="/read-books-chart" className={({ isActive }) =>
                             isActive ? 'text-[#23BE0A] border border-[#23BE0A] bg-white' : ''}>Pages to Read</NavLink></li>
                         <li><NavLink to="/best-sellers" className={({ isActive }) =>
                         isActive ? 'text-[#23BE0A] border border-[#23BE0A] bg-white' : ''}>Best Sellers</NavLink></li>
@@ -31,7 +31,7 @@ const navBar = () => {
                         isActive ? 'text-[#23BE0A] border border-[#23BE0A] bg-white' : ''}>Home</NavLink></li>
                     <li><NavLink to="/list-books" className={({ isActive }) =>
                         isActive ? 'text-[#23BE0A] border border-[#23BE0A] bg-white' : ''}>Listed Books</NavLink></li>
-                    <li><NavLink to="/read-posts" className={({ isActive }) =>
+                    <li><NavLink to="/read-books-chart" className={({ isActive }) =>
                         isActive ? 'text-[#23BE0A] border border-[#23BE0A] bg-white' : ''}>Pages to Read</NavLink></li>
                     <li><NavLink to="/best-sellers" className={({ isActive }) =>
                         isActive ? 'text-[#23BE0A] border border-[#23BE0A] bg-white' : ''}>Best Sellers</NavLink></li>

@@ -34,8 +34,8 @@ const PagesToRead = () => {
   }, [allData]);
 
   return (
-    <div className='bg-[#13131308] p-24 rounded-3xl'>
-      <ResponsiveContainer width="100%" height={600}>
+    <div className='bg-[#13131308] p-2 md:p-10 lg:p-14 flex justify-center items-center rounded-xl md:rounded-3xl'>
+      <ResponsiveContainer width="100%" height={650}>
         <BarChart data={readBooks}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="bookName" />

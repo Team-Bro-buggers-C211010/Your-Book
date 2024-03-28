@@ -34,7 +34,7 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage></ErrorPage>,
       },
       {
-        path: "/read-posts",
+        path: "/read-books-chart",
         element: <PagesToRead></PagesToRead>,
         loader: ()=> fetch('../API_Data/BookDataApi.json'),
         errorElement: <ErrorPage></ErrorPage>,
