@@ -12,7 +12,6 @@ const ReadBooks = ({ sortBy }) => {
     const allData = useLoaderData();
     
     useEffect(() => {
-        console.log(sortBy);
         const readDataArray = getStoredReadBooks();
         if (allData.length > 0) {
             const readBookList = readDataArray.reduce((acc, id) => {
