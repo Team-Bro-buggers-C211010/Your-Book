@@ -6,9 +6,9 @@ import { getStoredReadBooks } from '../../ulity/localstorage.js';
 const TriangleBar = (props) => {
   const { fill, x, y, width, height } = props;
   const getPath = (x, y, width, height) => {
-    return `M${x},${y + height}C${x + width / 6},${y + height} ${x + width / 2},${y + height / 6}
+    return `M${x},${y + height}C${x + width / 8},${y + height} ${x + width / 2},${y + height / 8}
       ${x + width / 2}, ${y}
-      C${x + width / 2},${y + height / 6} ${x + (5 * width) / 6},${y + height} ${x + width}, ${y + height}
+      C${x + width / 2},${y + height / 8} ${x + (7 * width) / 8},${y + height} ${x + width}, ${y + height}
       Z`;
   };
   return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
@@ -34,7 +34,7 @@ const PagesToRead = () => {
   }, [allData]);
 
   return (
-    <div>
+    <div className='bg-[#13131308] p-24 rounded-3xl'>
       <ResponsiveContainer width="100%" height={600}>
         <BarChart data={readBooks}>
           <CartesianGrid strokeDasharray="3 3" />
