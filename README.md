@@ -1,11 +1,12 @@
 # "Your Book" Website 
 
-_Live Site URL_
+### _Live Site URL(Netlify) :_ [Your Book Sites](https://your-book-sites.netlify.app/)
+### _Live Site URL(Surge) :_ [Your Book Sites](https://your-book.surge.sh/)
 
 **Features and Characteristics**
 - **Book Listing:** Explore a comprehensive list of books available on the platform.
-- **Sorting Functionality:** Sort books by various criteria such as genre, author, and publication date.
-- **Reading Recommendations:** Receive personalized book recommendations based on your reading history and preferences.
+- **Sorting Functionality:** Sort books by various criteria such as page number, ratings, and publication date in Descending Order.
+- **Details Book:** Every Books can see in details.
 - **User Reviews:** Read reviews and ratings from other users to help you discover new books.
 - **Best Seller Section:** Discover a curated selection of best-selling books.
 - **Responsive Design:** Enjoy a seamless browsing experience on any device, thanks to the website's responsive design.
@@ -13,7 +14,10 @@ _Live Site URL_
 
 
 
-# React + Vite
+
+
+
+## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
