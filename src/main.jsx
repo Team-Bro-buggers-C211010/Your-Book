@@ -14,47 +14,59 @@ import OnlineBook from './pages/BestSeller/BestSeller.jsx';
 import Cart from './pages/Cart/Cart';
 import BestSeller from './pages/BestSeller/BestSeller.jsx';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
+import AuthProviders from './Providers/AuthProviders.jsx';
+import LogIn from './pages/LogIn/LogIn.jsx';
+import SignUp from './pages/SignUp/SignUp.jsx';
+import PrivateRoute from './routes/PrivateRoute.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
     errorElement: <ErrorPage></ErrorPage>,
-    children:[
+    children: [
       {
         path: "/",
         element: <Home></Home>,
-        loader: ()=> fetch('../API_Data/BookDataApi.json'),
+        loader: () => fetch('../API_Data/BookDataApi.json'),
         errorElement: <ErrorPage></ErrorPage>,
       },
       {
         path: "/list-books",
-        element: <ListedBooks></ListedBooks>,
-        loader: ()=> fetch('../API_Data/BookDataApi.json'),
+        element: <PrivateRoute><ListedBooks></ListedBooks></PrivateRoute>,
+        loader: () => fetch('../API_Data/BookDataApi.json'),
         errorElement: <ErrorPage></ErrorPage>,
       },
       {
         path: "/read-books-chart",
-        element: <PagesToRead></PagesToRead>,
-        loader: ()=> fetch('../API_Data/BookDataApi.json'),
+        element: <PrivateRoute><PagesToRead></PagesToRead></PrivateRoute>,
+        loader: () => fetch('../API_Data/BookDataApi.json'),
         errorElement: <ErrorPage></ErrorPage>,
       },
       {
         path: "/booksId/:bookId",
-        element: <SingleBookDetails></SingleBookDetails>,
+        element: <PrivateRoute><SingleBookDetails></SingleBookDetails></PrivateRoute>,
         errorElement: <ErrorPage></ErrorPage>,
       },
       {
         path: "/best-sellers",
-        element: <BestSeller></BestSeller>,
-        loader: ()=> fetch('../API_Data/BookDataApi.json'),
+        element: <PrivateRoute><BestSeller></BestSeller></PrivateRoute>,
+        loader: () => fetch('../API_Data/BookDataApi.json'),
         errorElement: <ErrorPage></ErrorPage>,
       },
       {
         path: "/book-carts",
-        element: <Cart></Cart>,
-        loader: ()=> fetch('../API_Data/BookDataApi.json'),
+        element: <PrivateRoute><Cart></Cart></PrivateRoute>,
+        loader: () => fetch('../API_Data/BookDataApi.json'),
         errorElement: <ErrorPage></ErrorPage>,
+      },
+      {
+        path: "/signin",
+        element: <LogIn></LogIn>
+      },
+      {
+        path: "/signup",
+        element: <SignUp></SignUp>
       }
     ]
   },
@@ -62,6 +74,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProviders>
+      <RouterProvider router={router} />
+    </AuthProviders>
   </React.StrictMode>
 );

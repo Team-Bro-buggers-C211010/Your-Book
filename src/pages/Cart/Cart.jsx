@@ -17,7 +17,7 @@ const Cart = () => {
                     <input type="text" className="grow" placeholder="Takurmar Juli" />
                 </label>
                 <label className="input input-bordered flex items-center gap-2">
-                    Quantity
+                    Quantity :
                     <input type="text" className="grow" placeholder="01" />
                 </label>
                 <label className="input input-bordered flex items-center gap-2">
